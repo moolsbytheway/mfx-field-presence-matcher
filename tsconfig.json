@@ -8,6 +8,6 @@
     "declaration": true
   },
   "files": [
-    "src/advanced-condition-matcher-plugin.ts"
+    "src/field-presence-matcher-plugin.ts"
   ]
 }

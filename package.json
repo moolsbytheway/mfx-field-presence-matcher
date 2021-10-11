@@ -1,15 +1,14 @@
 {
-  "name": "mfx-advanced-condition-matcher",
-  "version": "0.0.9",
-  "description": "Advanced condition matcher for Mf-dynamic-form",
+  "name": "mfx-field-presence-matcher",
+  "version": "0.0.1",
+  "description": "Simple condition matcher for mf-dynamic-form",
   "dependencies": {
-    "mf-dynamic-form": "latest",
-    "filtrex": "^2.2.3"
+    "mf-dynamic-form": "latest"
   },
   "devDependencies": {
     "typescript": "~4.1.2"
   },
   "scripts": {
-    "start": "node node_modules/typescript/lib/tsc.js"
+    "build": "node node_modules/typescript/lib/tsc.js"
   }
 }
