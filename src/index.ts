@@ -1,7 +1,7 @@
 import {ConditionMatcher, ConditionMatcherContext, ConditionMatcherResult} from 'mf-dynamic-form';
 
 
-export class FieldPresenceMatcherPlugin implements ConditionMatcher {
+export default class FieldValueNotEmptyMatcher implements ConditionMatcher {
     fieldName: string;
 
     constructor(fieldName: string) {

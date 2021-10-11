@@ -1,6 +1,6 @@
 {
   "name": "mfx-field-presence-matcher",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "Simple condition matcher for mf-dynamic-form",
   "dependencies": {
     "mf-dynamic-form": "latest"

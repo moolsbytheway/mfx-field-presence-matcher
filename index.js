@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FieldPresenceMatcherPlugin = void 0;
-class FieldPresenceMatcherPlugin {
+class FieldValueNotEmptyMatcher {
     constructor(fieldName) {
         this.fieldName = fieldName;
     }
@@ -10,4 +9,4 @@ class FieldPresenceMatcherPlugin {
         return { matched: matched, fields: [this.fieldName] };
     }
 }
-exports.FieldPresenceMatcherPlugin = FieldPresenceMatcherPlugin;
+exports.default = FieldValueNotEmptyMatcher;
