@@ -1,4 +1,4 @@
-### Field presence matcher
+### Field value presence matcher
 #### mf-dynamic-form plugin
 
 #### Usage
@@ -13,8 +13,8 @@ Use it in your dynamic-form spec in `visibleWhen`, `requiredWhen`, `disabledWhen
    new TextboxFormControl({
       key: 'field2',
       label: 'Field 2',
-      visibleWhen: [new FieldPresenceMatcherPlugin("field1")]
-    }),
+      visibleWhen: [new FieldValueNotEmptyMatcher("field1")]
+    })
             
 ```
 
