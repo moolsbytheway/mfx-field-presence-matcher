@@ -3,6 +3,7 @@ import {ConditionMatcher, ConditionMatcherContext, ConditionMatcherResult} from 
 
 export default class FieldValueNotEmptyMatcher implements ConditionMatcher {
     fieldName: string;
+    targetFormGroup: any;
 
     constructor(fieldName: string, targetFormGroup?: any) {
         this.fieldName = fieldName;
