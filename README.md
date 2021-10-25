@@ -18,5 +18,25 @@ Use it in your dynamic-form spec in `visibleWhen`, `requiredWhen`, `disabledWhen
             
 ```
 
-@Since mf-dynamic-form@2.0.0
+#### Example with external FormGroup:
+```javascript
+
+    externalFormGroup = new FormGroup({
+        firstName: new FormControl('Ahmed')
+    });
+
+
+    new TextboxFormControl({
+        key: 'field1',
+        label: 'Field 1'
+    }),
+        new TextboxFormControl({
+            key: 'field2',
+            label: 'Field 2',
+            visibleWhen: [new FieldValueNotEmptyMatcher("firstName", externalFormGroup)]
+        })
+            
+```
+
+@Since mf-dynamic-form@2.3.0
 

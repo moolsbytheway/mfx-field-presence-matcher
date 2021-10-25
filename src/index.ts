@@ -4,14 +4,17 @@ import {ConditionMatcher, ConditionMatcherContext, ConditionMatcherResult} from 
 export default class FieldValueNotEmptyMatcher implements ConditionMatcher {
     fieldName: string;
 
-    constructor(fieldName: string) {
+    constructor(fieldName: string, targetFormGroup?: any) {
         this.fieldName = fieldName;
+        this.targetFormGroup = targetFormGroup;
     }
 
     match(context: ConditionMatcherContext): ConditionMatcherResult {
 
-        const matched = this.fieldName && context.formGroup.get(this.fieldName).value;
+        const targetFormGroup: any = this.targetFormGroup || context.formGroup;
 
-        return {matched: matched, fields: [this.fieldName]} as ConditionMatcherResult;
+        const matched = this.fieldName && targetFormGroup.get(this.fieldName).value;
+
+        return {matched: matched, fields: [this.fieldName], targetFormGroup: targetFormGroup} as ConditionMatcherResult;
     }
 }
